@@ -15,8 +15,10 @@ const saveImage = asyncHandler(async (req, res) => {
       image,
     });
   } else {
-    res.status(400);
-    throw new Error("Invalid data");
+    res.status(200);
+    res.json({
+      something: "something",
+    });
   }
 });
 
